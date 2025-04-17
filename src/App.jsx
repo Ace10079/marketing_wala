@@ -2,6 +2,11 @@ import React from "react";
 import { Navbar } from "./Navbar";
 import { GridBackgroundDemo } from "./GridBackgroundDemo";
 import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo";
+import { CarouselDemo } from "./CarouselDemo";
+import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
+import { AnimatedTestimonialsDemo } from "./AnimatedTestimonialsDemo";
+import MakeHimHappy from "../components/ui/MakeHimHappy";
+import GiftBoxWithPullString from "./GiftBoxWithPullString";
 
 function App() {
   return (
@@ -36,6 +41,8 @@ function App() {
       <main className="">
         <GridBackgroundDemo />
         <AppleCardsCarouselDemo/>
+        <CarouselDemo/>
+        <AnimatedTestimonialsDemo/>
       </main>
     </div>
   );

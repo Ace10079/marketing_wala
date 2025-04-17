@@ -1,1 +1,26 @@
 @import "tailwindcss";
+@theme inline {
+    --animate-aurora: aurora 60s linear infinite;
+    @keyframes aurora {
+      from {
+        background-position:
+          50% 50%,
+          50% 50%;
+      }
+      to {
+        background-position:
+          350% 50%,
+          350% 50%;
+      }
+    }
+  }
+  .rubik-marker-hatch-regular {
+    font-family: "Rubik Marker Hatch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .permanent-marker-regular {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }

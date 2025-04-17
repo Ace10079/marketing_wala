@@ -1,12 +1,15 @@
 import React from "react";
 import { Navbar } from "./Navbar";
-import { GridBackgroundDemo } from "./GridBackgroundDemo";
+
 import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo";
 import { CarouselDemo } from "./CarouselDemo";
 import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
 import { AnimatedTestimonialsDemo } from "./AnimatedTestimonialsDemo";
-import MakeHimHappy from "../components/ui/MakeHimHappy";
-import GiftBoxWithPullString from "./GiftBoxWithPullString";
+import { ImagesSliderDemo } from "./ImagesSliderDemo";
+import { CanvasRevealEffectDemo } from "./CanvasRevealEffectDemo";
+import { FloatingDockDemo } from "./FloatingDockDemo";
+import { AuroraBackgroundDemo } from "./AuroraBackgroundDemo";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -17,9 +20,9 @@ function App() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
-            src="./IMG_3157.JPG"
+            src="./3.png"
             alt="Logo"
-            className="h-20 w-20 object-cover "
+            className="h-30 w-30 object-cover "
           />
         </div>
 
@@ -39,10 +42,15 @@ function App() {
 
       {/* Main Content */}
       <main className="">
-        <GridBackgroundDemo />
+       <ImagesSliderDemo/>
         <AppleCardsCarouselDemo/>
         <CarouselDemo/>
         <AnimatedTestimonialsDemo/>
+        <CanvasRevealEffectDemo/>
+        
+        <FloatingDockDemo/>
+        <AuroraBackgroundDemo/>
+        <Footer/>
       </main>
     </div>
   );

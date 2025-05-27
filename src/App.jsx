@@ -1,15 +1,15 @@
 import React from "react";
-import { Navbar } from "./Navbar";
+import  Navbar  from "./Navbar";
 
-import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo";
-import { CarouselDemo } from "./CarouselDemo";
-import { AnimatedTestimonials } from "../components/ui/animated-testimonials";
-import { AnimatedTestimonialsDemo } from "./AnimatedTestimonialsDemo";
-import { ImagesSliderDemo } from "./ImagesSliderDemo";
-import { CanvasRevealEffectDemo } from "./CanvasRevealEffectDemo";
-import { FloatingDockDemo } from "./FloatingDockDemo";
-import { AuroraBackgroundDemo } from "./AuroraBackgroundDemo";
-import Footer from "./Footer";
+
+import Hero from "./Hero";
+import OurWork from "../components/Pages/OurWork";
+import CompanyLogos from "../components/Pages/CompanyLogos";
+import SuccessHighlight from "../components/Pages/SuccessHighlight";
+import WhyMW from "../components/Pages/WhyMW";
+import Testimonials from "../components/Pages/Testimonials";
+import ContactUs from "../components/Pages/ContactUs";
+
 
 function App() {
   return (
@@ -20,15 +20,15 @@ function App() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img
-            src="./3.png"
+            src="./icon.PNG"
             alt="Logo"
-            className="h-30 w-30 object-cover "
+            className="h-20 w-25"
           />
         </div>
 
         {/* Navbar */}
         <div className="hidden md:block">
-          <Navbar />
+          <Navbar/>
         </div>
 
         {/* Contact Us */}
@@ -42,15 +42,13 @@ function App() {
 
       {/* Main Content */}
       <main className="">
-       <ImagesSliderDemo/>
-        <AppleCardsCarouselDemo/>
-        <CarouselDemo/>
-        <AnimatedTestimonialsDemo/>
-        <CanvasRevealEffectDemo/>
-        
-        <FloatingDockDemo/>
-        <AuroraBackgroundDemo/>
-        <Footer/>
+    <Hero/>
+    <OurWork/>
+    <CompanyLogos/>
+    <SuccessHighlight/>
+   <WhyMW/>
+   <Testimonials/>
+   <ContactUs/>
       </main>
     </div>
   );

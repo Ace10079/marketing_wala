@@ -9,6 +9,8 @@ import SuccessHighlight from "../components/Pages/SuccessHighlight";
 import WhyMW from "../components/Pages/WhyMW";
 import Testimonials from "../components/Pages/Testimonials";
 import ContactUs from "../components/Pages/ContactUs";
+import CameraCursor from "../components/Pages/CameraCursor";
+import ServicesPage from "../components/Pages/ServicesPage";
 
 
 function App() {
@@ -43,13 +45,14 @@ function App() {
       {/* Main Content */}
       <main className="">
     <Hero/>
-    <OurWork/>
+   <ServicesPage/>
     <CompanyLogos/>
     <SuccessHighlight/>
    <WhyMW/>
    <Testimonials/>
    <ContactUs/>
       </main>
+      <CameraCursor/>
     </div>
   );
 }

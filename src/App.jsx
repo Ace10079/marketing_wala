@@ -3,14 +3,15 @@ import  Navbar  from "./Navbar";
 
 
 import Hero from "./Hero";
-import OurWork from "../components/Pages/OurWork";
+
 import CompanyLogos from "../components/Pages/CompanyLogos";
-import SuccessHighlight from "../components/Pages/SuccessHighlight";
-import WhyMW from "../components/Pages/WhyMW";
+
 import Testimonials from "../components/Pages/Testimonials";
 import ContactUs from "../components/Pages/ContactUs";
 import CameraCursor from "../components/Pages/CameraCursor";
 import ServicesPage from "../components/Pages/ServicesPage";
+
+
 
 
 function App() {
@@ -47,8 +48,7 @@ function App() {
     <Hero/>
    <ServicesPage/>
     <CompanyLogos/>
-    <SuccessHighlight/>
-   <WhyMW/>
+    
    <Testimonials/>
    <ContactUs/>
       </main>

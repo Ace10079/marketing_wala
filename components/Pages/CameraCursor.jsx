@@ -1,20 +1,32 @@
-// src/components/CameraCursor.jsx
 import React, { useEffect, useState } from 'react';
-import { Camera } from 'lucide-react'; // you can also use other icon libraries or an image
 
 const CameraCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // adjust as needed
+    };
+
+    checkIfMobile(); // initial check
+    window.addEventListener('resize', checkIfMobile); // update on resize
+
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    if (!isMobile) {
+      window.addEventListener('mousemove', handleMouseMove);
+    }
+
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', checkIfMobile);
     };
-  }, []);
+  }, [isMobile]);
+
+  if (isMobile) return null; // Don't render on mobile
 
   return (
     <div
@@ -27,7 +39,7 @@ const CameraCursor = () => {
         transition: 'transform 0.05s linear',
       }}
     >
-      <Camera size={24} color="black" />
+      <img src="/cursor.PNG" alt="Camera" width={24} height={24} />
     </div>
   );
 };

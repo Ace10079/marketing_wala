@@ -79,6 +79,46 @@
   .animate-sway {
     animation: sway 3s ease-in-out infinite;
   }
+  @keyframes floatText {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-floatText {
+    animation: floatText 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes pulseText {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.03);
+      opacity: 0.85;
+    }
+  }
+  
+  .animate-pulseText {
+    animation: pulseText 2s ease-in-out infinite;
+  }
+  
+  @keyframes waveText {
+    0%, 100% {
+      transform: rotate(-2deg);
+    }
+    50% {
+      transform: rotate(2deg);
+    }
+  }
+  
+  .animate-waveText {
+    animation: waveText 1.5s ease-in-out infinite;
+  }
   
   
   

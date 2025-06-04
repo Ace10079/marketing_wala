@@ -10,8 +10,8 @@ const logos = [
 
 export default function CompanyLogos() {
   return (
-    <div className="w-full overflow-hidden py-12 px-4 bg-gray-50 font-serif text-black border-y border-black">
-      <h2 className="text-center text-3xl uppercase font-bold tracking-widest border-b border-black pb-2 mb-10">
+    <div className="w-full overflow-hidden py-12 px-4 bg-gradient-to-r from-yellow-50 via-white to-pink-50 font-serif text-gray-800 border-y-2 border-gray-300">
+      <h2 className="text-center text-3xl uppercase font-bold tracking-widest border-b-2 border-gray-300 pb-2 mb-10">
         Companies We've Worked With
       </h2>
       <div className="relative">
@@ -21,7 +21,7 @@ export default function CompanyLogos() {
               key={index}
               src={logo}
               alt={`Company ${index}`}
-              className="h-14 w-auto object-contain grayscale contrast-125 opacity-90 border border-black p-2 bg-white shadow-sm"
+              className="h-14 w-auto object-contain bg-white p-2 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
             />
           ))}
           {/* Clone for looping */}
@@ -30,7 +30,7 @@ export default function CompanyLogos() {
               key={`clone-${index}`}
               src={logo}
               alt={`Company clone ${index}`}
-              className="h-14 w-auto object-contain grayscale contrast-125 opacity-90 border border-black p-2 bg-white shadow-sm"
+              className="h-14 w-auto object-contain bg-white p-2 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
             />
           ))}
         </div>

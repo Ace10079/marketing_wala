@@ -27,30 +27,34 @@ export function FAQPage() {
   };
 
   return (
-    <div className="bg-white py-16 px-6 font-serif text-black">
-      <div className=" mx-auto border-4 border-black p-6">
-        <h2 className="text-4xl font-bold uppercase tracking-widest text-center border-b-2 border-black pb-4 mb-6">
+    <section className="bg-white py-16 px-6 sm:px-12 font-sans text-[#064cda]">
+      <div className=" mx-auto bg-[#f8faff] rounded-xl shadow-lg p-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight">
           Frequently Asked Questions
         </h2>
 
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border-b border-black py-4 cursor-pointer"
+            className="border-b border-[#d4e3f7] py-4 transition-all duration-300 cursor-pointer"
             onClick={() => toggle(index)}
           >
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-bold">{faq.question}</h3>
-              {openIndex === index ? <Minus size={20} /> : <Plus size={20} />}
+              <h3 className="text-lg sm:text-xl font-medium">{faq.question}</h3>
+              {openIndex === index ? (
+                <Minus size={20} className="text-[#064cda]" />
+              ) : (
+                <Plus size={20} className="text-[#064cda]" />
+              )}
             </div>
             {openIndex === index && (
-              <p className="mt-2 text-gray-700 italic text-lg animate-fadeIn">
+              <p className="mt-3 text-gray-700 text-base sm:text-lg leading-relaxed">
                 {faq.answer}
               </p>
             )}
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

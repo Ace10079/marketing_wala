@@ -34,13 +34,13 @@ export default function TestimonialCarousel() {
   const controls = useAnimation();
 
   return (
-    <section className="overflow-hidden bg-white py-14 border-y-2 border-black font-serif">
-      <h2 className="text-3xl md:text-4xl text-center font-extrabold uppercase mb-10 border-b-2 border-black max-w-fit mx-auto px-6 py-2">
+    <section className="bg-white py-16 font-sans text-[#064cda] relative overflow-hidden">
+      <h2 className="text-3xl sm:text-4xl text-center font-bold mb-12 tracking-tight">
         What Our Clients Say
       </h2>
 
       <motion.div
-        className="flex w-max gap-6 px-4"
+        className="flex w-max gap-8 px-6"
         animate={{ x: ["0%", "-50%"] }}
         transition={{
           x: {
@@ -54,7 +54,7 @@ export default function TestimonialCarousel() {
         {repeatedTestimonials.map(({ name, role, photo, text }, index) => (
           <div
             key={index}
-            className="flex-shrink-0 w-80 bg-white border border-black rounded-md p-6 shadow-[2px_2px_0_#000] hover:shadow-[4px_4px_0_#000] transition-all duration-300"
+            className="flex-shrink-0 w-80 bg-[#f8faff] rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300"
             onMouseEnter={() => controls.stop()}
             onMouseLeave={() =>
               controls.start({
@@ -70,18 +70,18 @@ export default function TestimonialCarousel() {
               })
             }
           >
-            <div className="flex items-center space-x-4 mb-3">
+            <div className="flex items-center space-x-4 mb-4">
               <img
                 src={photo}
                 alt={name}
-                className="w-14 h-14 rounded-full border border-black"
+                className="w-14 h-14 rounded-full border-2 border-[#064cda]"
               />
               <div>
-                <p className="text-lg font-bold">{name}</p>
-                <p className="text-xs italic text-gray-600">{role}</p>
+                <p className="text-lg font-semibold text-black">{name}</p>
+                <p className="text-sm text-gray-500 italic">{role}</p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-gray-800">{text}</p>
+            <p className="text-sm text-gray-800 leading-relaxed">{text}</p>
           </div>
         ))}
       </motion.div>

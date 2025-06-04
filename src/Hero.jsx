@@ -1,50 +1,61 @@
+import React from "react";
+import Navbar from "./Navbar";
+
 function Hero() {
   return (
-    <div className="bg-[url('/bg.JPG')] bg-cover bg-center min-h-screen relative flex items-center justify-center">
-      {/* Mic Image */}
-      <img
-        src="./mic.PNG"
-        alt="mic"
-        className="w-44 h-82 absolute left-0 bottom-0 animate-tilt z-10"
-      />
+    <div className="bg-neutral-100 text-black  relative flex flex-col items-center px-6 sm:px-12 font-serif">
+      {/* Header inside Hero */}
+      <header className="flex items-center justify-between w-full py-4 ">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img src="./3.png" alt="Logo" className="h-15 w-20" />
+        </div>
 
-      {/* Girl Image */}
-      <img
-        src="./girl.PNG"
-        alt="girl"
-        className="absolute right-5 bottom-0 w-[250px] h-[230px] animate-sway z-10"
-      />
+        {/* Navbar */}
+        <nav className="hidden md:block">
+          <Navbar />
+        </nav>
 
-      {/* Text Content */}
-      <div className="absolute z-20 text-white text-center px-4 max-w-[90%]">
-        {/* Line 1 - turning + camera */}
-        <div className="flex justify-center items-center animate-fadeInUp">
-          <p className="text-[2.5rem] md:text-5xl font-bold text-blue-500 tracking-wide  text-center mr-2">
-            turning
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button className="text-black focus:outline-none">☰</button>
+        </div>
+      </header>
+
+      {/* Removed decorative dotted border */}
+
+      {/* Newspaper header content */}
+      <div className="relative z-10 text-center max-w-4xl space-y-6 animate-fadeInUp w-full">
+        <div className="flex flex-col items-center">
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-6xl font-extrabold uppercase tracking-wider border-y-4 border-black inline-block px-4 py-1 leading-tight">
+            The Marketing Wala
+          </h1>
+
+          <h2 className="text-lg sm:text-2xl italic text-gray-800 tracking-wide mt-1 max-w-full px-2 sm:px-0">
+            Turning *Thoda sa idea* into **Bada Brand Magic** — Daily!
+          </h2>
+        </div>
+
+        {/* Catchy Bollywood-style line */}
+        <div className="w-full py-8 bg-neutral-100  flex items-center justify-center">
+          <p
+            className="text-xl sm:text-3xl font-bold italic tracking-wide max-w-4xl text-center px-4 sm:px-0"
+            style={{ fontFamily: "'Rubik Marker Hatch', cursive" }}
+          >
+            "Marketing Wala — jahan har campaign banta hai{" "}
+            <span className="text-red-700">Blockbuster Hit!</span> 💥{" "}
+            <span className="text-red-600 underline decoration-red-400 decoration-2">
+              Dhamaka ideas,
+            </span>{" "}
+            <span className="text-yellow-700 italic">item number creativity,</span>{" "}
+            aur{" "}
+            <span className="text-red-800 font-extrabold">
+              full paisa vasool
+            </span>{" "}
+            results!"
           </p>
-          <img
-            src="./camera.PNG"
-            alt="camera"
-            className="w-[150px] h-[120px] animate-float z-10"
-          />
         </div>
-
-        {/* Line 2 - 'thoda sa idea' */}
-        <p className="text-[4rem] md:text-[6rem] font-black text-black leading-none  animate-waveText">
-          ‘thoda sa idea’
-        </p>
-
-        {/* Line 3 - into */}
-        <div className="relative inline-block my-2 animate-waveText" >
-          <span className="absolute -top-1 -left-2 rotate-[-5deg] bg-yellow-400 px-2 py-1 text-black text-sm font-bold z-0">
-            into
-          </span>
-        </div>
-
-        {/* Line 4 - BADA BRAND MAGIC */}
-        <p className="text-[3rem] md:text-[5rem] font-extrabold text-blue-600 leading-none tracking-tight drop-shadow-xl animate-pulseText">
-          BADA BRAND MAGIC
-        </p>
       </div>
     </div>
   );

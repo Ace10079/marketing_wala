@@ -17,80 +17,106 @@ export default function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // For demo, just show submitted message
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 4000);
     setFormData({ name: "", email: "", message: "" });
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-400 via-pink-400 to-red-400 flex flex-col justify-between">
-      <div className="max-w-3xl mx-auto p-8 bg-white rounded-xl shadow-lg my-16 animate-fadeInUp">
-        <h2 className="text-4xl font-extrabold mb-4 text-center text-pink-600">
-          Get in Touch!
+    <div className="min-h-screen bg-white font-serif text-gray-900 py-12 px-4">
+      <div className=" mx-auto border-2 border-black p-10 bg-white shadow-[4px_4px_0_#000]">
+        <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-center border-b-2 border-black pb-4 mb-8">
+          Contact the Editor
         </h2>
-        <p className="mb-8 text-center text-gray-700 italic text-lg">
-          Have questions or want to say hi? We promise we don’t bite 🦄
-        </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Awesome Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
-          />
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Left Side – Form */}
+          <div>
+            <h3 className="text-2xl font-bold mb-2">Submit a Story Tip 📝</h3>
+            <p className="italic mb-6">
+              Got a scoop or a business idea? We’re all ears.
+            </p>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email (no spam, promise!)"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 transition"
-          />
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div>
+                <label className="block font-bold mb-1" htmlFor="name">Full Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  placeholder="e.g., Jane Doe"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-black rounded-sm focus:outline-none focus:ring-2 focus:ring-black bg-[#fdfcf7]"
+                />
+              </div>
 
-          <textarea
-            name="message"
-            rows="4"
-            placeholder="Your Message... Make it fun!"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 transition resize-none"
-          />
+              <div>
+                <label className="block font-bold mb-1" htmlFor="email">Email Address</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="e.g., jane@newstips.com"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-black rounded-sm focus:outline-none focus:ring-2 focus:ring-black bg-[#fdfcf7]"
+                />
+              </div>
 
-          <button
-            type="submit"
-            className="w-full bg-pink-500 text-white py-3 rounded-md font-semibold text-lg hover:bg-pink-600 transition-transform hover:scale-105"
-          >
-            Send Some Love 💌
-          </button>
-        </form>
+              <div>
+                <label className="block font-bold mb-1" htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="What's the scoop?"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-2 border border-black rounded-sm focus:outline-none focus:ring-2 focus:ring-black bg-[#fdfcf7] resize-none"
+                />
+              </div>
 
-        {submitted && (
-          <p className="mt-6 text-center text-green-600 font-semibold animate-fadeIn">
-            Thanks for reaching out! We’ll get back to you faster than you can say
-            “Marketing Wala” 🚀
-          </p>
-        )}
+              <button
+                type="submit"
+                className="w-full bg-black text-white py-3 rounded-sm font-semibold uppercase tracking-wider hover:bg-gray-800 transition"
+              >
+                Send Your Story 🚀
+              </button>
+
+              {submitted && (
+                <p className="mt-4 text-green-700 font-semibold animate-pulse">
+                  Received! We’ll publish it faster than ink dries on paper 📰✍️
+                </p>
+              )}
+            </form>
+          </div>
+
+          {/* Right Side – Newspaper Quote + Visual */}
+          <div className="flex flex-col justify-between">
+            <div>
+              <h4 className="text-2xl font-bold mb-4 text-black">
+                From the Press Room of Marketing Wala
+              </h4>
+              <p className="mb-4 text-base leading-relaxed">
+                Whether it’s a revolutionary product, a trending idea, or just good old inspiration — we treat every message like a headline. Reach out, and we’ll deliver your message with the punch of front-page news.
+              </p>
+            </div>
+            <img
+              src="https://illustrations.popsy.co/gray/contact.svg"
+              alt="Newspaper Contact"
+              className="w-64 mx-auto md:mx-0 border border-black mt-4 shadow-md"
+            />
+          </div>
+        </div>
       </div>
 
-      <Footer />
+      <footer className="mt-12 text-center text-sm text-gray-700 italic">
+        © {new Date().getFullYear()} Marketing Wala — Printed With Passion, Delivered With Purpose 📰
+      </footer>
     </div>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-pink-600 text-white py-6 text-center select-none">
-      <p>
-        © {new Date().getFullYear()} Marketing Wala. All the vibes, none of the spam. 🤙
-      </p>
-    </footer>
   );
 }

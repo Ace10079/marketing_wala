@@ -5,6 +5,13 @@ function Hero() {
 
   return (
     <div className="bg-[url('/bg.JPG')] bg-cover bg-center min-h-screen relative flex flex-col">
+      {/* Top-left hand image */}
+      <img
+        src="./IMG_5586.PNG"
+        alt="Hand"
+        className="absolute top-0 left-40 h-40 w-auto z-30"
+      />
+
       {/* Top bar: Logo left, Navbar right */}
       <header className="flex justify-between items-center px-6 py-4">
         {/* Logo on the left */}
@@ -12,13 +19,23 @@ function Hero() {
 
         {/* Navbar on the right */}
         <nav className="hidden md:flex space-x-8 font-semibold text-black">
-          <a href="#about" className="hover:text-blue-400 transition">
+          <a
+            href="#about"
+            className="hover:text-blue-400 hover:rounded-full hover:border hover:border-black px-2 py-1 transition"
+          >
             About
           </a>
-          <a href="#services" className="hover:text-blue-400 transition">
+
+          <a
+            href="#services"
+            className="hover:text-blue-400 hover:rounded-full hover:border hover:border-black px-2 py-1 transition"
+          >
             Services
           </a>
-          <a href="#contact" className="hover:text-blue-400 transition">
+          <a
+            href="#contact"
+            className="hover:text-blue-400 hover:rounded-full hover:border hover:border-black px-2 py-1 transition"
+          >
             Contact Us
           </a>
         </nav>
@@ -36,21 +53,21 @@ function Hero() {
             <div className="absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg py-2 z-20 flex flex-col">
               <a
                 href="#about"
-                className="px-4 py-2 text-black hover:bg-gray-100"
+                className="px-4 py-2 text-black hover:bg-gray-100 hover:rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
               </a>
               <a
                 href="#services"
-                className="px-4 py-2 text-black hover:bg-gray-100"
+                className="px-4 py-2 text-black hover:bg-gray-100 hover:rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#contact"
-                className="px-4 py-2 text-black hover:bg-gray-100"
+                className="px-4 py-2 text-black hover:bg-gray-100 hover:rounded-md"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us
@@ -61,10 +78,19 @@ function Hero() {
       </header>
 
       {/* Center content */}
-      <div className="flex flex-col justify-center items-center ">
-        <img src="./camera.PNG" alt="Camera" className="h-30 w-25" />
-        <img src="./text.PNG" alt="Text" className="w-2xl" />
-      </div>
+   {/* Center content */}
+<div className="flex flex-col items-center justify-center text-center px-4 w-full flex-1">
+  <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
+    <img src="./IMG_6731.PNG" alt="" className="h-24 w-auto" />
+    <img src="./camera.PNG" alt="" className="h-20 w-auto" />
+  </div>
+  <img
+    src="./IMG_6730.PNG"
+    alt="Text"
+    className="max-w-full md:max-w-3xl h-auto"
+  />
+</div>
+
 
       {/* Mic Image */}
       <img
@@ -76,10 +102,10 @@ function Hero() {
       {/* Girl Image */}
       <img
         src="./girl.PNG"
-        alt="girl"Add commentMore actions
+        alt="girl"
         className="absolute right-5 bottom-0 h-50 w-30 md:h-60 md:w-50 animate-sway z-10"
       />
-      
+
       {/* Animation keyframes */}
       <style>{`
         @keyframes tilt {

@@ -91,7 +91,7 @@ function Hero() {
         <img
           src="./IMG_6730.PNG"
           alt="Text"
-          className="max-w-full md:max-w-3xl h-auto"
+          className="md:w-auto h-64"
         />
       </div>
 

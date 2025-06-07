@@ -9,7 +9,7 @@ function Hero() {
       <img
         src="./IMG_5586.PNG"
         alt="Hand"
-        className="absolute top-0 left-40 h-40 w-auto z-30 animate-bounce-y"
+        className="absolute top-0 left-40 h-30 md:h-40 w-auto z-30 animate-bounce-y"
       />
 
       {/* Top bar: Logo left, Navbar right */}

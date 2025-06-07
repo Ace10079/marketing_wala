@@ -24,7 +24,7 @@ export default function ContactUs() {
 
   return (
     <div className="min-h-screen bg-white text-[#064cda] py-12 px-4 font-sans">
-      <div className=" mx-auto bg-[#f7faff] rounded-xl shadow-md p-8 sm:p-12">
+      <div className="mx-auto bg-[#f7faff] rounded-xl shadow-md p-8 sm:p-12">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
           Get in Touch
         </h2>
@@ -110,12 +110,23 @@ export default function ContactUs() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 We believe in ideas that spark impact. Whether you're a startup or a visionary, we’re excited to hear your story and help bring it to life.
               </p>
+
+              {/* 🌍 Embedded Google Map */}
+              <div className="rounded-lg overflow-hidden shadow-md transition-transform duration-500 ease-in-out hover:scale-[1.01]">
+                <iframe
+                  title="Marketingwala Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4560718826555!2d72.87068497504235!3d19.131435882091825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b8824d117a13%3A0x205bb2c6b140dc87!2sPowai%2C%20Mumbai%2C%20Maharashtra%20400076!5e0!3m2!1sen!2sin!4v1717751067760!5m2!1sen!2sin"
+                  width="100%"
+                  height="250"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
-            <img
-              src="https://illustrations.popsy.co/gray/contact.svg"
-              alt="Contact Illustration"
-              className="w-64 mx-auto md:mx-0"
-            />
+
+           
           </div>
         </div>
       </div>

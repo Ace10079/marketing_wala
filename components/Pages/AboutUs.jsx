@@ -13,12 +13,24 @@ function AboutUs() {
             About <span className="text-black">Marketing Wala</span>
           </h1>
 
-          {/* Intro Paragraph */}
-          <p className="text-lg sm:text-xl text-center leading-relaxed mb-10 text-black">
-            We’re a <strong className="text-[#064cda]">fast-growing digital agency</strong> from Mumbai,
-            blending strategy with wild creativity. Whether it’s <em>“thoda idea”</em> or a full-blown brand launch — 
-            we turn visions into viral campaigns.
-          </p>
+          {/* Real Story - Separated Paragraphs */}
+          <div className="space-y-6 text-lg sm:text-xl text-black leading-relaxed mb-10">
+            <p>
+              We’re just two friends who traded our 9-to-5 comfort for the chaos of chasing a dream — and that dream became <strong className="text-[#064cda]">Marketingwala</strong>.
+            </p>
+            <p>
+              No investors, no shortcuts — just endless nights, chai-fueled brainstorms, and a belief that we could build something real.
+            </p>
+            <p>
+              For the past two years, we’ve been figuring it out one campaign at a time — growing brands, learning from failures, and never backing down.
+            </p>
+            <p>
+              We’re still in the making, but our goal is clear: to deliver creative, honest, and budget-friendly marketing that actually works.
+            </p>
+            <p>
+              We’ve been where most brands start — and that’s exactly why we know how to help you grow.
+            </p>
+          </div>
 
           {/* Hindi Punchlines */}
           <div className="bg-[#f2f8ff] border-l-4 border-[#064cda] p-6 rounded-xl shadow-sm mb-10">
@@ -35,7 +47,7 @@ function AboutUs() {
 
           {/* Location Footer */}
           <p className="text-center text-sm sm:text-base font-medium text-gray-700 tracking-wide">
-            <span className="mr-2">📍</span> Headquartered in Mumbai — the city that never sleeps, and neither do our ideas!
+            <span className="mr-2">📍</span> Built from scratch in Mumbai — the city that never sleeps, and neither do our ideas!
           </p>
         </div>
       </div>

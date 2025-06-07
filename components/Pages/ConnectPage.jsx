@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Youtube, Twitter, Linkedin } from "lucide-react";
+import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 export function ConnectPage() {
   return (
@@ -19,7 +19,7 @@ export function ConnectPage() {
         {/* Social Buttons */}
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-12">
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_marketingwala?igsh=NWF3OWVuN2Y1dHo0&utm_source=qr"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 sm:gap-3 bg-[#ffeef6] px-4 sm:px-6 py-3 rounded-md shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -29,7 +29,7 @@ export function ConnectPage() {
           </a>
 
           <a
-            href="https://youtube.com"
+            href="https://youtube.com/@marketingwalaxtra?si=p6Dd5Dl2_QO39-mr"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 sm:gap-3 bg-[#fff3f3] px-4 sm:px-6 py-3 rounded-md shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -39,17 +39,7 @@ export function ConnectPage() {
           </a>
 
           <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 sm:gap-3 bg-[#e1f0ff] px-4 sm:px-6 py-3 rounded-md shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
-          >
-            <Twitter size={24} className="text-blue-500" />
-            <span className="text-base sm:text-lg font-semibold">Twitter</span>
-          </a>
-
-          <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/company/na-creatives/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 sm:gap-3 bg-[#e0f7ff] px-4 sm:px-6 py-3 rounded-md shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
@@ -59,43 +49,17 @@ export function ConnectPage() {
           </a>
         </div>
 
-        {/* Newsletter subscription */}
-        <div className="mb-12 max-w-md mx-auto">
-          <h3 className="text-2xl font-semibold mb-4 text-[#064cda]">
-            Stay Updated
-          </h3>
-          <p className="text-gray-600 mb-6 text-sm sm:text-base">
-            Subscribe to our newsletter for the latest marketing insights and tips delivered straight to your inbox.
+        {/* Motivational Section */}
+        <div className="bg-white p-6 sm:p-8 rounded-lg border border-[#cce0f5] shadow-sm">
+          <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-[#064cda]">Let’s Make Your Brand Unforgettable</h3>
+          <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+            Whether you're a startup dreaming big or a brand seeking a bold refresh, our creative spark can light your way.
+            Follow us, engage with us, and let’s build something extraordinary — one idea at a time.
           </p>
-          <form className="flex flex-col sm:flex-row gap-2">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-grow rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#064cda] text-sm sm:text-base"
-              required
-            />
-            <button
-              type="submit"
-              className="bg-[#064cda] text-white px-6 py-2 rounded-md hover:bg-[#053bb5] transition-colors duration-300 text-sm sm:text-base"
-            >
-              Subscribe
-            </button>
-          </form>
-        </div>
-
-        {/* Testimonials / Quotes */}
-        <div className="border-t border-[#cce0f5] pt-8">
-          <blockquote className="italic text-gray-700 text-base sm:text-lg max-w-2xl mx-auto mb-6">
-            “Marketing Wala’s content has transformed how I approach branding — insightful, inspiring, and actionable.”
+          <blockquote className="italic text-gray-600 text-sm sm:text-base border-l-4 border-[#064cda] pl-4">
+            “Marketing Wala isn’t just a brand, it’s a movement for storytellers.”
           </blockquote>
-          <p className="font-semibold text-[#064cda] text-sm sm:text-base">— Anjali S., Marketing Manager</p>
-        </div>
-
-        {/* Footer */}
-        <div className="border-t border-[#cce0f5] pt-6 mt-10">
-          <p className="text-sm text-gray-500 italic">
-            © {new Date().getFullYear()} Marketing Wala — Where every scroll tells a story.
-          </p>
+          <p className="mt-2 font-semibold text-[#064cda] text-sm">— The MW Team</p>
         </div>
       </div>
     </section>

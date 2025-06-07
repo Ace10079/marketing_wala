@@ -1,22 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function CompanyLogos() {
-  const [logos, setLogos] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetch("https://marketing-wala-backend.onrender.com/api/logos")
-      .then((res) => res.json())
-      .then((data) => {
-        setLogos(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <p>Loading logos...</p>;
+  const logos = [
+    "./Companies/1.png",
+    "./Companies/3.png",
+    "./Companies/5.png",
+    "./Companies/6.png",
+    "./Companies/7.png",
+    "./Companies/9.png",
+    "./Companies/10.png",
+    "./Companies/11.png",
+    "./Companies/12.png",
+    "./Companies/13.png"
+    
+    
+    // Add more as needed
+  ];
 
   if (!logos.length) return <p>No logos found.</p>;
 
@@ -27,19 +26,18 @@ export default function CompanyLogos() {
       </h2>
       <div className="relative">
         <div className="animate-marquee whitespace-nowrap flex items-center gap-16">
-          {logos.map((logo, index) => (
+          {logos.map((src, index) => (
             <img
-              key={logo._id}
-              src={`https://marketing-wala-backend.onrender.com${logo.src}`}  // full path to image
+              key={index}
+              src={src}
               alt={`Company ${index}`}
               className="h-30 w-auto object-contain bg-white p-2 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
             />
           ))}
-          {/* Clone for looping */}
-          {logos.map((logo, index) => (
+          {logos.map((src, index) => (
             <img
-              key={`clone-${logo._id}`}
-              src={`https://marketing-wala-backend.onrender.com${logo.src}`}
+              key={`clone-${index}`}
+              src={src}
               alt={`Company clone ${index}`}
               className="h-30 w-auto object-contain bg-white p-2 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
             />

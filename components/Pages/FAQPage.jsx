@@ -1,23 +1,36 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import axios from "axios";
 
 export function FAQPage() {
-  const [faqs, setFaqs] = useState([]);
   const [openIndex, setOpenIndex] = useState(null);
 
-  useEffect(() => {
-    fetchFaqs();
-  }, []);
-
-  const fetchFaqs = async () => {
-    try {
-      const res = await axios.get("https://marketing-wala-backend.onrender.com/api/faqs"); // your backend API url
-      setFaqs(res.data);
-    } catch (error) {
-      console.error("Failed to fetch FAQs", error);
-    }
-  };
+  const faqs = [
+    {
+      question: "What kind of businesses do you work with?",
+      answer:
+        "We work with all kinds of businesses, from startups and homegrown brands to growing companies and individual creators. If you have a vision, we’re here to market it right.",
+    },
+    {
+      question: "Do you offer services for a limited budget?",
+      answer:
+        "Yes, we do. We understand that every brand has different budget constraints. That’s why we tailor our services to suit your budget without compromising on creativity or quality.",
+    },
+    {
+      question: "What services do you provide?",
+      answer:
+        "We offer a wide range of services including social media marketing and management, content creation (reels, photos, videos), web development, augmented reality (AR), performance marketing, branding, and more. Whether you’re building your brand or scaling it, we’ve got what you need.",
+    },
+    {
+      question: "How soon can we get started?",
+      answer:
+        "We can get started as soon as you’re ready. Once we understand your brand, goals, and requirements, we begin the onboarding process and start working on your strategy without delay.",
+    },
+    {
+      question: "Why should we choose Marketingwala over other agencies?",
+      answer:
+        "We’re not just another agency — we’re your creative partners. With real experience, a passion for storytelling, and a deep understanding of what brands need, we bring fresh ideas, clear communication, and marketing that actually works.",
+    },
+  ];
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -30,31 +43,32 @@ export function FAQPage() {
           Frequently Asked Questions
         </h2>
 
-        {faqs.length === 0 ? (
-          <p className="text-center text-gray-500">No FAQs available.</p>
-        ) : (
-          faqs.map((faq, index) => (
-            <div
-              key={faq._id || index}
-              className="border-b border-[#d4e3f7] py-4 transition-all duration-300 cursor-pointer"
-              onClick={() => toggle(index)}
-            >
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg sm:text-xl font-medium">{faq.question}</h3>
-                {openIndex === index ? (
-                  <Minus size={20} className="text-[#064cda]" />
-                ) : (
-                  <Plus size={20} className="text-[#064cda]" />
-                )}
-              </div>
-              {openIndex === index && (
-                <p className="mt-3 text-gray-700 text-base sm:text-lg leading-relaxed">
-                  {faq.answer}
-                </p>
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className="border-b border-[#d4e3f7] py-4 cursor-pointer"
+            onClick={() => toggle(index)}
+          >
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg sm:text-xl font-medium">{faq.question}</h3>
+              {openIndex === index ? (
+                <Minus size={20} className="text-[#064cda]" />
+              ) : (
+                <Plus size={20} className="text-[#064cda]" />
               )}
             </div>
-          ))
-        )}
+
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                openIndex === index ? "max-h-96 mt-3 opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <p className="text-gray-700 text-base sm:text-lg leading-relaxed">
+                {faq.answer}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

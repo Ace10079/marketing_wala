@@ -20,7 +20,7 @@ export default function CompanyLogos() {
   if (!logos.length) return <p>No logos found.</p>;
 
   return (
-    <div className="w-full overflow-hidden py-12 px-4 bg-gradient-to-r from-yellow-50 via-white to-pink-50 font-serif text-gray-800 border-y-2 border-gray-300">
+    <div className="w-full overflow-hidden py-12 px-4 bg-gradient-to-r from-yellow-50 via-white to-pink-50 font-serif text-gray-800 border-y-2 border-gray-300 poiret-one-regular">
       <h2 className="text-center text-3xl uppercase font-bold tracking-widest border-b-2 border-gray-300 pb-2 mb-10">
         Companies We've Worked With
       </h2>

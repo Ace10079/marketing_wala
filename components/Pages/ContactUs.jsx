@@ -23,7 +23,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#064cda] py-12 px-4 font-sans">
+    <div className="min-h-screen bg-white text-[#064cda] py-12 px-4 poiret-one-regular">
       <div className="mx-auto bg-[#f7faff] rounded-xl shadow-md p-8 sm:p-12">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
           Get in Touch

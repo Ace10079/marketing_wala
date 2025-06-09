@@ -2,7 +2,7 @@ import { PointerHighlight } from "../ui/pointer-highlight";
 
 export function PointerHighlightDemo() {
   return (
-    <div className="bg-white py-10 px-4 font-serif text-black border-y-2 border-blue-700">
+    <div className="bg-white py-10 px-4 poiret-one-regular text-black border-y-2 border-blue-700">
       {/* Heading */}
       <div className="flex justify-center gap-2 items-center text-2xl md:text-4xl font-extrabold tracking-wide uppercase  pb-4 mb-8">
         The best way to grow is to

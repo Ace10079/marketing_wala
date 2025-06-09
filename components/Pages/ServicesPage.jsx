@@ -43,10 +43,8 @@ const ServicesShowcase = () => {
   const [activeService, setActiveService] = useState(services[0]);
 
   return (
-    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 font-sans">
-      <h2 className="text-center text-4xl font-semibold mb-10">
-        What We Offer
-      </h2>
+    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 poiret-one-regular">
+      <h2 className="text-center text-4xl font-semibold mb-10">What We Offer</h2>
 
       {/* Service Tabs */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
@@ -95,7 +93,6 @@ const ServicesShowcase = () => {
               "Video-312.mp4",
               "Video-316.mp4",
               "s13.jpg",
-             
               "Video-348.mp4",
               "Video-411.mp4",
               "Video-504.mp4",
@@ -115,7 +112,7 @@ const ServicesShowcase = () => {
               return (
                 <div
                   key={index}
-                  className="w-[180px] h-[260px] sm:w-[200px] sm:h-[300px] bg-white rounded-lg overflow-hidden shadow-md border"
+                  className="w-[180px] h-[260px] sm:w-[200px] sm:h-[300px] bg-white rounded-lg overflow-hidden shadow-md"
                 >
                   {isVideo ? (
                     <video
@@ -124,13 +121,14 @@ const ServicesShowcase = () => {
                       muted
                       loop
                       playsInline
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   ) : (
                     <img
                       src={`./Services/${file}`}
                       alt={`media-${index}`}
-                      className="w-full h-full object-cover"
+                      loading="lazy"
+                      className="w-full h-full object-contain"
                     />
                   )}
                 </div>

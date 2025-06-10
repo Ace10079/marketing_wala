@@ -11,7 +11,9 @@ export default function CompanyLogos() {
     "./Companies/10.png",
     "./Companies/11.png",
     "./Companies/12.png",
-    "./Companies/13.png"
+    "./Companies/13.png",  
+    "./Companies/15.PNG",
+    "./Companies/16.AVIF"
     
     
     // Add more as needed
@@ -21,7 +23,7 @@ export default function CompanyLogos() {
 
   return (
     <div className="w-full overflow-hidden py-12 px-4 bg-white font-serif text-gray-800 border-y-2 border-gray-300 poiret-one-regular">
-      <h2 className="text-center text-3xl uppercase font-bold tracking-widest border-b-2 border-gray-300 pb-2 mb-10">
+      <h2 className="text-center text-3xl uppercase font-bold tracking-widest border-gray-300 pb-2 mb-12">
         Companies We've Worked With
       </h2>
       <div className="relative">

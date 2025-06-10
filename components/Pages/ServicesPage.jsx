@@ -38,6 +38,9 @@ const ServicesShowcase = () => {
       description:
         "Climb the ranks and stay there. We optimize your online presence to drive organic traffic and improve your visibility across search engines.",
     },
+    {
+      name: "AR"
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -51,8 +54,8 @@ const ServicesShowcase = () => {
   }, []);
 
   return (
-    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 ">
-      <h2 className="text-center text-4xl font-semibold mb-10 poiret-one-regular">What We Offer</h2>
+    <div className="py-12 px-4 sm:px-8 bg-white text-black ">
+      <h2 className="text-center text-6xl font-bold mb-10 poiret-one-regular">What We Offer</h2>
 
       {/* Static Service Names Row */}
       <div className="overflow-hidden border-y border-gray-200 py-5 mb-10 poppins-regular">
@@ -76,9 +79,9 @@ const ServicesShowcase = () => {
         <Marquee pauseOnHover speed={40} gradient={false}>
           <div className="flex gap-6 px-2">
             {[
-              "s1.jpg", "s2.png", "Video-6.mp4", "Video-18.mp4", "s3.png", "s4.png",
-              "Video-50.mp4", "Video-66.mp4", "s5.png", "s6.jpg", "Video-79.mp4",
-              "Video-147.mp4", "s7.jpg", "s8.png", "Video-212.mp4", "Video-215.mp4",
+              "s1.jpg", "s2.jpg", "Video-6.mp4", "Video-18.mp4", "s3.jpg", "s4.jpg",
+              "Video-50.mp4", "Video-66.mp4", "s5.jpg", "s6.jpg", "Video-79.mp4",
+              "Video-147.mp4", "s7.jpg", "s8.jpg", "Video-212.mp4", "Video-215.mp4",
               "s9.jpg", "s10.jpg", "Video-221.mp4", "Video-304.mp4", "s11.jpg",
               "s12.jpg", "Video-312.mp4", "Video-316.mp4", "s13.jpg", "Video-348.mp4",
               "Video-411.mp4", "Video-504.mp4", "Video-525.mp4", "Video-701.mp4",

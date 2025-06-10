@@ -15,12 +15,30 @@ export default function ContactUs() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 4000);
-    setFormData({ name: "", email: "", message: "" });
+  
+    try {
+      const res = await fetch("https://formspree.io/f/mdkzebpp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (res.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setSubmitted(false), 4000);
+      } else {
+        alert("Failed to send message. Try again.");
+      }
+    } catch (error) {
+      alert("Error occurred. Please try later.");
+    }
   };
+  
 
   return (
     <div className="min-h-screen bg-white text-[#064cda] py-12 px-4 ">

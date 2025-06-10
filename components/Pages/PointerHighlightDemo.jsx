@@ -2,12 +2,12 @@ import { PointerHighlight } from "../ui/pointer-highlight";
 
 export function PointerHighlightDemo() {
   return (
-    <div className="bg-white py-10 px-4 poiret-one-regular text-black border-y-2 border-blue-700">
+    <div className="bg-white py-10 px-4 poiret-one-regular text-black border-y-2 border-blue-700 pt-serif-bold">
       {/* Heading */}
       <div className="flex justify-center gap-2 items-center text-2xl md:text-4xl font-extrabold tracking-wide uppercase  pb-4 mb-8">
         The best way to grow is to
         <PointerHighlight>
-          <span className="italic underline decoration-2 decoration-blue-900">
+          <span className="px-2 italic underline decoration-2 decoration-blue-900">
             collaborate
           </span>
         </PointerHighlight>
@@ -25,7 +25,7 @@ export function PointerHighlightDemo() {
               pointerClassName="text-blue-700 h-3 w-3"
               containerClassName="inline-block mr-1 ml-1"
             >
-              <span className="relative z-10"> Big</span>
+              <span className="relative z-10 px-2"> Big </span>
             </PointerHighlight>
           </div>
           <p className="mt-3 text-sm text-blue-800 leading-relaxed">
@@ -45,7 +45,7 @@ export function PointerHighlightDemo() {
               pointerClassName="text-blue-800 h-3 w-3"
               containerClassName="inline-block mx-1"
             >
-              <span className="relative z-10">Budgets</span>
+              <span className="relative z-10 px-2">Budgets</span>
             </PointerHighlight>
           </div>
           <p className="mt-3 text-sm text-blue-800 leading-relaxed">
@@ -65,7 +65,7 @@ export function PointerHighlightDemo() {
               pointerClassName="text-blue-800 h-3 w-3"
               containerClassName="inline-block mx-1"
             >
-              <span className="relative z-10">Create</span>
+              <span className="relative z-10 px-2">Create</span>
             </PointerHighlight> It 
            
           </div>
@@ -84,7 +84,7 @@ export function PointerHighlightDemo() {
               pointerClassName="text-blue-800 h-3 w-3"
               containerClassName="inline-block mx-1"
             >
-              <span className="relative z-10">Real</span>
+              <span className="relative z-10 px-2">Real</span>
             </PointerHighlight> Results.
            
           </div>
@@ -102,7 +102,7 @@ export function PointerHighlightDemo() {
               pointerClassName="text-blue-800 h-3 w-3"
               containerClassName="inline-block mx-1"
             >
-              <span className="relative z-10">Grow</span>
+              <span className="relative z-10 px-2">Grow</span>
             </PointerHighlight>With You, Not Over You
           
            

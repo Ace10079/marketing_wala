@@ -37,7 +37,7 @@ export function FAQPage() {
   };
 
   return (
-    <section className="bg-white py-16 px-6 sm:px-12 font-sans text-[#064cda] poiret-one-regular">
+    <section className="bg-white py-16 px-6 sm:px-12 font-sans text-[#064cda] pt-serif-bold">
       <div className="mx-auto bg-[#f8faff] rounded-xl shadow-lg p-8 max-w-3xl">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight">
           Frequently Asked Questions

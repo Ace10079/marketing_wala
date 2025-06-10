@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutUs() {
   return (
-    <div className="bg-white text-[#064cda] min-h-screen flex items-center justify-center px-6 py-20 poiret-one-regular">
+    <div className="bg-white text-[#064cda] min-h-screen flex items-center justify-center px-6 py-20 pt-serif-bold">
       <div className="max-w-5xl w-full bg-white rounded-3xl shadow-2xl px-8 sm:px-16 py-12 border border-[#064cda] relative overflow-hidden">
         {/* Decorative Blue Blob */}
         <div className="absolute -top-16 -right-20 w-96 h-96 bg-[#064cda] rounded-full opacity-10 blur-3xl z-0" />

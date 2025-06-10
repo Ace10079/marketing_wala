@@ -3,7 +3,7 @@ import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 export function ConnectPage() {
   return (
-    <section className="bg-white py-16 px-4 sm:px-8 font-sans text-[#064cda] flex flex-col justify-center items-center poiret-one-regular">
+    <section className="bg-white py-16 px-4 sm:px-8 font-sans text-[#064cda] flex flex-col justify-center items-center pt-serif-bold">
       <div className="mx-auto bg-[#f2f8ff] rounded-xl shadow-lg p-6 sm:p-14 text-center max-w-3xl w-full">
         {/* Heading */}
         <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-6">

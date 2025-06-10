@@ -134,4 +134,23 @@ html {
     font-weight: 400;
     font-style: normal;
   }
+  .edu-vic-wa-nt-hand{
+    font-family: "Edu VIC WA NT Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight:600;
+    font-style: normal;
+  }
+  .pt-serif-bold {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  @keyframes fade {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade {
+    animation: fade 0.6s ease-in-out;
+  }
   

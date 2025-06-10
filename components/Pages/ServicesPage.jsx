@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Marquee from "react-fast-marquee";
 
 const ServicesShowcase = () => {
@@ -40,26 +40,29 @@ const ServicesShowcase = () => {
     },
   ];
 
-  const [activeService, setActiveService] = useState(services[0]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Rotate description every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % services.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 poiret-one-regular">
+    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 pt-serif-bold">
       <h2 className="text-center text-4xl font-semibold mb-10">What We Offer</h2>
 
-      {/* Service Tabs */}
+      {/* Static Service Names Row */}
       <div className="flex flex-wrap justify-center gap-4 mb-10">
-        {services.map((service) => (
-          <button
-            key={service.name}
-            onClick={() => setActiveService(service)}
-            className={`px-5 py-2 rounded-full text-sm font-medium border transition duration-300 ${
-              activeService.name === service.name
-                ? "bg-black text-white border-black"
-                : "bg-white text-black border-gray-400 hover:border-black hover:bg-gray-100"
-            }`}
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="px-5 py-2 rounded-full text-sm font-medium border border-gray-300 bg-gray-50 text-black"
           >
             {service.name}
-          </button>
+          </div>
         ))}
       </div>
 
@@ -68,45 +71,14 @@ const ServicesShowcase = () => {
         <Marquee pauseOnHover speed={40} gradient={false}>
           <div className="flex gap-6 px-2">
             {[
-              "s1.jpg",
-              "s2.png",
-              "Video-6.mp4",
-              "Video-18.mp4",
-              "s3.png",
-              "s4.png",
-              "Video-50.mp4",
-              "Video-66.mp4",
-              "s5.png",
-              "s6.jpg",
-              "Video-79.mp4",
-              "Video-147.mp4",
-              "s7.jpg",
-              "s8.png",
-              "Video-212.mp4",
-              "Video-215.mp4",
-              "s9.jpg",
-              "s10.jpg",
-              "Video-221.mp4",
-              "Video-304.mp4",
-              "s11.jpg",
-              "s12.jpg",
-              "Video-312.mp4",
-              "Video-316.mp4",
-              "s13.jpg",
-              "Video-348.mp4",
-              "Video-411.mp4",
-              "Video-504.mp4",
-              "Video-525.mp4",
-              "Video-701.mp4",
-              "Video-723.mp4",
-              "Video-778.mp4",
-              "Video-805.mp4",
-              "Video-812.mp4",
-              "Video-836.mp4",
-              "Video-912.mp4",
-              "Video-937.mp4",
-              "Video-941.mp4",
-              "Video-989.mp4",
+              "s1.jpg", "s2.png", "Video-6.mp4", "Video-18.mp4", "s3.png", "s4.png",
+              "Video-50.mp4", "Video-66.mp4", "s5.png", "s6.jpg", "Video-79.mp4",
+              "Video-147.mp4", "s7.jpg", "s8.png", "Video-212.mp4", "Video-215.mp4",
+              "s9.jpg", "s10.jpg", "Video-221.mp4", "Video-304.mp4", "s11.jpg",
+              "s12.jpg", "Video-312.mp4", "Video-316.mp4", "s13.jpg", "Video-348.mp4",
+              "Video-411.mp4", "Video-504.mp4", "Video-525.mp4", "Video-701.mp4",
+              "Video-723.mp4", "Video-778.mp4", "Video-805.mp4", "Video-812.mp4",
+              "Video-836.mp4", "Video-912.mp4", "Video-937.mp4", "Video-941.mp4", "Video-989.mp4"
             ].map((file, index) => {
               const isVideo = file.endsWith(".mp4");
               return (
@@ -138,10 +110,13 @@ const ServicesShowcase = () => {
         </Marquee>
       </div>
 
-      {/* Description */}
-      <div className="max-w-3xl mx-auto text-center px-4 sm:px-0">
-        <p className="text-base sm:text-lg leading-relaxed text-gray-600">
-          {activeService.description}
+      {/* Auto-Rotating Description */}
+      <div className="max-w-3xl mx-auto text-center px-4 sm:px-0 h-[100px] flex items-center justify-center">
+        <p
+          key={activeIndex}
+          className="text-base sm:text-lg leading-relaxed text-gray-600 transition-opacity duration-700 ease-in-out animate-fade"
+        >
+          {services[activeIndex].description}
         </p>
       </div>
     </div>

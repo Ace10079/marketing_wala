@@ -154,3 +154,9 @@ html {
     animation: fade 0.6s ease-in-out;
   }
   
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

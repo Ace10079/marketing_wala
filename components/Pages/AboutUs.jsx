@@ -2,19 +2,19 @@ import React from "react";
 
 function AboutUs() {
   return (
-    <div className="bg-white text-[#064cda] min-h-screen flex items-center justify-center px-6 py-20 pt-serif-bold">
+    <div className="bg-white text-[#064cda] min-h-screen flex items-center justify-center px-6 py-20">
       <div className="max-w-5xl w-full bg-white rounded-3xl shadow-2xl px-8 sm:px-16 py-12 border border-[#064cda] relative overflow-hidden">
         {/* Decorative Blue Blob */}
         <div className="absolute -top-16 -right-20 w-96 h-96 bg-[#064cda] rounded-full opacity-10 blur-3xl z-0" />
         <div className="relative z-10">
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-8 tracking-tight text-[#064cda]">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-center mb-8 tracking-tight text-[#064cda] poiret-one-regular">
             About <span className="text-black">Marketing Wala</span>
           </h1>
 
           {/* Real Story - Separated Paragraphs */}
-          <div className="space-y-6 text-lg sm:text-xl text-black leading-relaxed mb-10">
+          <div className="space-y-6 text-lg sm:text-xl text-black leading-relaxed mb-10 poppins-regular">
             <p>
               We’re just two friends who traded our 9-to-5 comfort for the chaos of chasing a dream — and that dream became <strong className="text-[#064cda]">Marketingwala</strong>.
             </p>

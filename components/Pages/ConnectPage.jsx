@@ -3,21 +3,21 @@ import { Instagram, Youtube, Linkedin } from "lucide-react";
 
 export function ConnectPage() {
   return (
-    <section className="bg-white py-16 px-4 sm:px-8 font-sans text-[#064cda] flex flex-col justify-center items-center pt-serif-bold">
+    <section className="bg-white py-16 px-4 sm:px-8 font-sans text-[#064cda] flex flex-col justify-center items-center ">
       <div className="mx-auto bg-[#f2f8ff] rounded-xl shadow-lg p-6 sm:p-14 text-center max-w-3xl w-full">
         {/* Heading */}
-        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-6">
+        <h2 className="text-3xl sm:text-5xl font-bold tracking-tight mb-6 poiret-one-regular">
           Connect With Us
         </h2>
 
         {/* Intro */}
-        <p className="text-gray-700 text-base sm:text-xl leading-relaxed mb-10 mx-auto">
+        <p className="text-gray-700 text-base sm:text-xl leading-relaxed mb-10 mx-auto poppins-regular">
           Where stories meet strategy — follow our creative footprints on your favorite platforms.  
           Join a community passionate about marketing, creativity, and growth.
         </p>
 
         {/* Social Buttons */}
-        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-12">
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 mb-12 poppins-regular">
           <a
             href="https://www.instagram.com/_marketingwala?igsh=NWF3OWVuN2Y1dHo0&utm_source=qr"
             target="_blank"
@@ -50,7 +50,7 @@ export function ConnectPage() {
         </div>
 
         {/* Motivational Section */}
-        <div className="bg-white p-6 sm:p-8 rounded-lg border border-[#cce0f5] shadow-sm">
+        <div className="bg-white p-6 sm:p-8 rounded-lg border border-[#cce0f5] shadow-sm poppins-regular" >
           <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-[#064cda]">Let’s Make Your Brand Unforgettable</h3>
           <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
             Whether you're a startup dreaming big or a brand seeking a bold refresh, our creative spark can light your way.

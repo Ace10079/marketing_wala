@@ -23,13 +23,13 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-[#064cda] py-12 px-4 pt-serif-bold">
+    <div className="min-h-screen bg-white text-[#064cda] py-12 px-4 ">
       <div className="mx-auto bg-[#f7faff] rounded-xl shadow-md p-8 sm:p-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-10 poiret-one-regular">
           Get in Touch
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-12 poppins-regular">
           {/* Form Section */}
           <div>
             <h3 className="text-2xl font-semibold mb-2">Drop Us a Message 📬</h3>

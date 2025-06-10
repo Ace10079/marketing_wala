@@ -37,7 +37,7 @@ export function FAQPage() {
   };
 
   return (
-    <section className="bg-white py-16 px-6 sm:px-12 font-sans text-[#064cda] pt-serif-bold">
+    <section className="bg-white py-16 px-6 sm:px-12 font-sans text-[#064cda] poiret-one-regular">
       <div className="mx-auto bg-[#f8faff] rounded-xl shadow-lg p-8 max-w-3xl">
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-10 tracking-tight">
           Frequently Asked Questions
@@ -49,7 +49,7 @@ export function FAQPage() {
             className="border-b border-[#d4e3f7] py-4 cursor-pointer"
             onClick={() => toggle(index)}
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between poppins-regular">
               <h3 className="text-lg sm:text-xl font-medium">{faq.question}</h3>
               {openIndex === index ? (
                 <Minus size={20} className="text-[#064cda]" />
@@ -59,7 +59,7 @@ export function FAQPage() {
             </div>
 
             <div
-              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              className={`overflow-hidden transition-all duration-500 ease-in-out poppins-regular ${
                 openIndex === index ? "max-h-96 mt-3 opacity-100" : "max-h-0 opacity-0"
               }`}
             >

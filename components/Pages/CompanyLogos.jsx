@@ -20,7 +20,7 @@ export default function CompanyLogos() {
   if (!logos.length) return <p>No logos found.</p>;
 
   return (
-    <div className="w-full overflow-hidden py-12 px-4 bg-gradient-to-r from-yellow-50 via-white to-pink-50 font-serif text-gray-800 border-y-2 border-gray-300 pt-serif-bold">
+    <div className="w-full overflow-hidden py-12 px-4 bg-white font-serif text-gray-800 border-y-2 border-gray-300 poiret-one-regular">
       <h2 className="text-center text-3xl uppercase font-bold tracking-widest border-b-2 border-gray-300 pb-2 mb-10">
         Companies We've Worked With
       </h2>
@@ -31,7 +31,7 @@ export default function CompanyLogos() {
               key={index}
               src={src}
               alt={`Company ${index}`}
-              className="h-30 w-auto object-contain bg-white p-2 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              className="h-30 w-auto object-contain  p-2 hover:scale-105 transition-transform duration-300"
             />
           ))}
           {logos.map((src, index) => (
@@ -39,7 +39,7 @@ export default function CompanyLogos() {
               key={`clone-${index}`}
               src={src}
               alt={`Company clone ${index}`}
-              className="h-30 w-auto object-contain bg-white p-2 rounded-lg shadow-md hover:scale-105 transition-transform duration-300"
+              className="h-30 w-auto object-contain  p-2 hover:scale-105 transition-transform duration-300"
             />
           ))}
         </div>

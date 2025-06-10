@@ -51,20 +51,25 @@ const ServicesShowcase = () => {
   }, []);
 
   return (
-    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 pt-serif-bold">
-      <h2 className="text-center text-4xl font-semibold mb-10">What We Offer</h2>
+    <div className="py-12 px-4 sm:px-8 bg-white text-gray-800 ">
+      <h2 className="text-center text-4xl font-semibold mb-10 poiret-one-regular">What We Offer</h2>
 
       {/* Static Service Names Row */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="px-5 py-2 rounded-full text-sm font-medium border border-gray-300 bg-gray-50 text-black"
-          >
-            {service.name}
-          </div>
-        ))}
-      </div>
+      <div className="overflow-hidden border-y border-gray-200 py-5 mb-10 poppins-regular">
+  <Marquee pauseOnHover speed={30} gradient={false} direction="right">
+    <div className="flex gap-6 px-4">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className="px-5 py-2 rounded-full text-xl font-medium border border-gray-300 bg-gray-50 text-black whitespace-nowrap"
+        >
+          {service.name}
+        </div>
+      ))}
+    </div>
+  </Marquee>
+</div>
+
 
       {/* Media Carousel */}
       <div className="overflow-hidden border-t border-b border-gray-200 py-5 mb-10">
@@ -111,7 +116,7 @@ const ServicesShowcase = () => {
       </div>
 
       {/* Auto-Rotating Description */}
-      <div className="max-w-3xl mx-auto text-center px-4 sm:px-0 h-[100px] flex items-center justify-center">
+      <div className="max-w-3xl mx-auto text-center px-4 sm:px-0 h-[100px] flex items-center justify-center poppins-regular">
         <p
           key={activeIndex}
           className="text-base sm:text-lg leading-relaxed text-gray-600 transition-opacity duration-700 ease-in-out animate-fade"

@@ -17,7 +17,7 @@ function App() {
     <div className="min-h-screen flex flex-col relative scroll-smooth">
       {/* Transparent Navbar */}
       <header className="absolute top-0 left-0 w-full flex justify-between items-center px-6 py-4 z-50 bg-transparent">
-        <img src="./icon.PNG" alt="Logo" className="h-20 w-auto" />
+        <img src="./icon.PNG" alt="Logo" className="h-15 md:h-20 w-auto" />
 
         <nav className="hidden md:flex space-x-8 font-bold text-black drop-shadow-md text-xl knewave-regular">
           <a href="#about" className="hover:text-blue-300 transition">About</a>
@@ -29,7 +29,7 @@ function App() {
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
-            className="text-white text-3xl focus:outline-none"
+            className="text-black text-3xl focus:outline-none"
           >
             ☰
           </button>

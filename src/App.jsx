@@ -73,7 +73,22 @@ function App() {
       </header>
 
       {/* Main Content */}
+
       <main>
+        {/* WhatsApp Floating Button */}
+<a
+  href="https://wa.me/918850234109?text=Hi%20there!%20I'm%20interested%20in%20your%20services."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="fixed bottom-6 left-6 z-50  text-white rounded-full p-2 shadow-lg transition duration-300"
+>
+  <img
+    src="/whatsapp.webp" // Replace with actual path to your WhatsApp icon
+    alt="WhatsApp"
+    className="h-12 w-12 md:h-10 md:w-10"
+  />
+</a>
+
         <Hero />
 
         <section id="services" className="scroll-mt-24">
